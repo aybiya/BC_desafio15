@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from "react-toastify";
+import { MdAssignmentAdd } from "react-icons/md";
 
 const ProductForm = ({ addOrUpdateProduct, selectedProduct }) => {
   const [formProduct, setFormProduct] = useState(
@@ -79,7 +80,7 @@ const ProductForm = ({ addOrUpdateProduct, selectedProduct }) => {
           />
         </label>
         <br />
-        <button className="btn" type="submit">{selectedProduct ? 'Actualizar' : 'Agregar'}</button>
+        <button className="btn" type="submit"><MdAssignmentAdd /> {selectedProduct ? 'Actualizar' : 'Agregar'}</button>
       </form>
       </article>
     </section>

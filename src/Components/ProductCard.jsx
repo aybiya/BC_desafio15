@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
-import React from 'react'
+import React from 'react';
+import { FaTrash } from "react-icons/fa";
+import { FaRegPenToSquare } from "react-icons/fa6";
+import { FaRegCheckCircle } from "react-icons/fa";
+import { GiCancel } from "react-icons/gi";
 
 
 const ProductCard = ({ product, onEdit, onDelete }) => {
@@ -50,8 +54,8 @@ const ProductCard = ({ product, onEdit, onDelete }) => {
             onChange={(e) => handleFieldChange('price', e.target.value)}
           />
           <div>
-            <button className="btn" onClick={handleSave}>Guardar</button>
-            <button className="delete-btn" onClick={handleCancel}>Cancelar</button>
+            <button className="btn" onClick={handleSave}><FaRegCheckCircle /> Guardar</button>
+            <button className="delete-btn" onClick={handleCancel}><GiCancel /> Cancelar</button>
           </div>
         </article>
       ) : (
@@ -60,8 +64,8 @@ const ProductCard = ({ product, onEdit, onDelete }) => {
           <h3>{product.name}</h3>
           <p className="description">{product.description}</p>
           <p className="price">${product.price}</p>
-          <button className="btn" onClick={handleEdit}>Editar</button>
-          <button className="delete-btn" onClick={() => onDelete(product.id)}>Eliminar</button>
+          <button className="btn" onClick={handleEdit}><FaRegPenToSquare /> Editar</button>
+          <button className="delete-btn" onClick={() => onDelete(product.id)}><FaTrash /> Eliminar</button>
         </>
       )}
     </article>
