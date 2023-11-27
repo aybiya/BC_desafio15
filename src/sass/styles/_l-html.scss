@@ -1,0 +1,14 @@
+/* // html */
+
+@use './h-fonts' as F;
+@use './h-colors' as C;
+
+
+html {
+    font-family: F.$mainFont;
+    font-size: F.$fontSize;
+    font-weight: F.$textRegular;
+    line-height: F.$lineHeight;
+    margin-top: 1.5rem;
+    text-align: center;
+} 
