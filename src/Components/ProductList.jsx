@@ -33,7 +33,6 @@ const ProductList = ({ products, onEdit, onDelete }) => {
           onDelete={handleDelete}
         />
       ))}
-      <ToastContainer />
     </section>
   );
 };
